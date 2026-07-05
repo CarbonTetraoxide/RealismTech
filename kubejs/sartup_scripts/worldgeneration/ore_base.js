@@ -1,0 +1,118 @@
+"use strict";
+
+GTCEuStartupEvents.registry('gtceu:tag_prefix', event => {
+    var $Blocks = Java.loadClass('net.minecraft.world.level.block.Blocks');
+    var $ResourceLocation = Java.loadClass('net.minecraft.resources.ResourceLocation');
+    var $BuiltInRegistries = Java.loadClass('net.minecraft.core.registries.BuiltInRegistries');
+
+    var getSafeBlockState = function(blockId) {
+        try {
+            var block = $BuiltInRegistries.BLOCK.get(new $ResourceLocation(blockId));
+            if (block != null && !block.defaultBlockState().isAir()) {
+                return block.defaultBlockState();
+            }
+        } catch (e) {
+        }
+        return $Blocks.STONE.defaultBlockState();
+    };
+
+    var toTitleCase = function(str) {
+        return str.split('_').map(function(word) {
+            return word.charAt(0).toUpperCase() + word.slice(1);
+        }).join(' ');
+    };
+
+    // 1. 移除GTCEu矿石基底
+    [
+        TagPrefix.oreDeepslate, TagPrefix.oreSand, TagPrefix.oreRedSand,
+        TagPrefix.oreMarble, TagPrefix.oreGravel, TagPrefix.oreEndstone,
+        TagPrefix.oreNetherrack, TagPrefix.oreBlackstone, TagPrefix.oreBasalt,
+        TagPrefix.oreAndesite, TagPrefix.oreDiorite, TagPrefix.oreGranite,
+        TagPrefix.oreRedGranite
+    ].forEach(function(ore) {
+        if (ore) TagPrefix.ORES.remove(ore);
+    });
+
+    var shouldGenerateOre = function(material) {
+        return material.hasProperty(PropertyKey.ORE);
+    };
+
+    var shouldGenerateSandOre = function(material) {
+        return material.getName().includes("sand") && material.hasProperty(PropertyKey.ORE);
+    };
+
+    //注册TFC岩石
+    if (Platform.isLoaded('tfc')) {
+        [
+            'granite', 'diorite', 'gabbro', 'rhyolite', 'basalt', 'andesite', 'dacite',
+            'shale', 'claystone', 'limestone', 'conglomerate', 'dolomite', 'chert', 'chalk',
+            'quartzite', 'slate', 'phyllite', 'schist', 'gneiss', 'marble'
+        ].forEach(function(stoneTypeName) {
+            event.create(stoneTypeName, 'ore')
+                .stateSupplier(function() { return getSafeBlockState('tfc:rock/raw/' + stoneTypeName); })
+                .baseModelLocation('tfc:block/rock/raw/' + stoneTypeName)
+                .unificationEnabled(true)
+                .materialIconType(GTMaterialIconType.ore)
+                .generationCondition(shouldGenerateOre)
+                .langValue('%s ' + toTitleCase(stoneTypeName) + ' Ore');
+        });
+
+        [
+            'brown', 'white', 'black', 'red', 'yellow', 'green', 'pink'
+        ].forEach(function(color) {
+            var name = color + '_sand';
+            event.create(name, 'ore')
+                .stateSupplier(function() { return getSafeBlockState('tfc:sand/' + color); })
+                .baseModelLocation('tfc:block/sand/' + color)
+                .unificationEnabled(true)
+                .materialIconType(GTMaterialIconType.ore)
+                .generationCondition(shouldGenerateSandOre)
+                .langValue('%s ' + toTitleCase(name) + ' Ore');
+        });
+    }
+
+    //注册原版岩石
+    event.create('deepslate', 'ore')
+        .stateSupplier(function() { return getSafeBlockState('minecraft:deepslate'); })
+        .baseModelLocation('minecraft:block/deepslate')
+        .unificationEnabled(true)
+        .materialIconType(GTMaterialIconType.ore)
+        .generationCondition(shouldGenerateOre)
+        .langValue('%s Deepslate Ore');
+
+    event.create('dripstone', 'ore')
+        .stateSupplier(function() { return getSafeBlockState('minecraft:dripstone_block'); })
+        .baseModelLocation('minecraft:block/dripstone_block')
+        .unificationEnabled(true)
+        .materialIconType(GTMaterialIconType.ore)
+        .generationCondition(shouldGenerateOre)
+        .langValue('%s Dripstone Ore');
+
+    event.create('pyroxenite', 'ore')
+        .stateSupplier(function() { return getSafeBlockState('minecraft:blackstone'); })
+        .baseModelLocation('minecraft:block/blackstone')
+        .unificationEnabled(true)
+        .materialIconType(GTMaterialIconType.ore)
+        .generationCondition(shouldGenerateOre)
+        .langValue('%s Pyroxenite Ore');
+
+    //注册Ad Astra
+    if (Platform.isLoaded('ad_astra')) {
+        [
+            { name: 'moon_stone', block: 'ad_astra:block/moon_stone' },
+            { name: 'moon_deepslate', block: 'ad_astra:block/moon_deepslate' },
+            { name: 'mars_stone', block: 'ad_astra:block/mars_stone' },
+            { name: 'venus_stone', block: 'ad_astra:block/venus_stone' },
+            { name: 'mercury_stone', block: 'ad_astra:block/mercury_stone' },
+            { name: 'glacio_stone', block: 'ad_astra:block/glacio_stone' }
+        ].forEach(function(rock) {
+            event.create(rock.name, 'ore')
+                .stateSupplier(function() { return getSafeBlockState(rock.block); })
+                .baseModelLocation(rock.block)
+                .unificationEnabled(true)
+                .materialIconType(GTMaterialIconType.ore)
+                .generationCondition(shouldGenerateOre)
+                .langValue('%s ' + toTitleCase(rock.name) + ' Ore');
+        });
+    }
+});
