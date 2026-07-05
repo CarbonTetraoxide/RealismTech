@@ -1,0 +1,1335 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "part_1"
+	group: "1651D054AF4757A0"
+	icon: "tfc:rock/loose/andesite"
+	id: "6F470FD4A12F0BD5"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["010AD9CDFEFEFCC4"]
+			description: [
+				"来到这片大陆的第一步，在没有&9农业革命&f的时期，你只能做一个最原始的&7狩猎-采集者&f，摘取&e随处可见的浆果蔬菜&f以供充饥。"
+				"收集任意类型的食物。"
+			]
+			hide_until_deps_complete: true
+			icon: "firmalife:plant/wild_red_grapes"
+			id: "1DE3BFC6BF71BAA7"
+			tasks: [{
+				id: "19582174922F7415"
+				item: {
+					Count: 1
+					id: "ftbfiltersystem:smart_filter"
+					tag: {
+						"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(tfc:foods)"
+					}
+				}
+				title: "食物"
+				type: "item"
+			}]
+			title: "食物问题"
+			x: 1.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["0163716801B97211"]
+			hide_until_deps_complete: true
+			hide_until_deps_visible: false
+			id: "010AD9CDFEFEFCC4"
+			subtitle: "毕竟现在好像也没其他事可以干，是吧？"
+			tasks: [
+				{
+					count: 8L
+					id: "330BE29919383854"
+					item: {
+						Count: 1
+						id: "ftbfiltersystem:smart_filter"
+						tag: {
+							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(forge:rods/wooden)"
+						}
+					}
+					title: "任意木枝"
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "503D62D0A3F2176F"
+					item: {
+						Count: 1
+						id: "ftbfiltersystem:smart_filter"
+						tag: {
+							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(rnr:loose_rock_items)"
+						}
+					}
+					title: "任意石子"
+					type: "item"
+				}
+			]
+			title: "一起捡树枝和石子！"
+			x: 0.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["010AD9CDFEFEFCC4"]
+			description: [
+				""
+				"通过以如图的方式塑形获得石斧、石刀和石铲。&8(后二者的塑性配方请查看JEI）"
+				"&6注意，直接用石子和木棍制作出来的工具只有完整耐久度的一半。用干草等捆绑物将石子和木棍捆起来才能得到正常的工具。"
+				"{image:ftbquests:textures/picture/axe_making.png width:165 height:100 align:center}"
+			]
+			hide_until_deps_complete: true
+			id: "7B9C628B00BC9EC4"
+			rewards: [{
+				count: 8
+				id: "186E1384F0C0595A"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "minecraft:stick"
+				}
+				type: "item"
+			}]
+			subtitle: "将几块石头相互摩擦就能磨出形状以制造工具，很神奇吧？"
+			tasks: [
+				{
+					id: "030105A948F284E9"
+					item: {
+						Count: 1
+						id: "ftbfiltersystem:smart_filter"
+						tag: {
+							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(tfc:stone_axe)"
+						}
+					}
+					title: "石斧"
+					type: "item"
+				}
+				{
+					id: "1B5B78A76D745E30"
+					item: {
+						Count: 1
+						id: "ftbfiltersystem:smart_filter"
+						tag: {
+							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(tfc:stone_knife)"
+						}
+					}
+					title: "石刀"
+					type: "item"
+				}
+				{
+					id: "6693881215F55F21"
+					item: {
+						Count: 1
+						id: "ftbfiltersystem:smart_filter"
+						tag: {
+							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(tfc:stone_shovel)"
+						}
+					}
+					title: "石铲"
+					type: "item"
+				}
+			]
+			title: "打制石器"
+			x: 0.0d
+			y: 2.0d
+		}
+		{
+			description: [
+				"基础：保持在0到30摄氏度之间，尽量接近15度。尽量保持温度指示箭头为白色。"
+				""
+				"温值：你失去/获得热量的速度受周围方块、湿度等影响。"
+				""
+				"调节因素 - 模组中的每个物品都有各自的热值，它们会改变你体温升高或降低的速度。"
+				""
+				"环境 - 群峦中的区块温度会根据季节和位置而变化。湿度也是其中一个影响值。"
+				""
+				"天气 - 在户外会迅速降低你的体温，尤其是暴风雨期间，即使在室内也会在降低你的体温。"
+				""
+				"时间 - 白天温度较高，早晨和傍晚较低，夜间寒冷。"
+				""
+				"液体 - 水会让你的体温下降，温泉（如果你很绝望，也可以用岩浆）会加热你。"
+				""
+				"{@pagebreak}"
+				"遮阳 - 在炎热的阳光下，找到一处荫蔽会有奇效，任何一种头盔也可以帮助你避免阳光直射。中等保温效果。"
+				""
+				"健康 - 水分充足有助于抵御炎热，饮食均衡有助于抵御寒冷。没有保温效果。"
+				""
+				"饮食 - 夏天吃水果和蔬菜有助于抵御炎热，冬天吃肉类和谷物有助于抵御寒冷。没有保温效果。"
+				""
+				"地下 - 地表之下的矿洞温度相当寒冷，但是随着探索越深 温度会越暖和。添加小幅度的保温效果。"
+				""
+				"火源 - 篝火和木炭炉等不同的热源方块可以帮助你抵御寒冷。离它们越近，效果越好。"
+				""
+				"物品 - 在群峦模组中加热的物品，如锭或陶器也会加热你本身。有小幅度的保温效果。"
+				""
+				"衣物（新）- 有羊毛和皮革衣物可以取暖，丝绸/粗麻布衣物可以降温，有不同的保温效果"
+			]
+			icon: {
+				Count: 1
+				ForgeCaps: {
+					"tfc:item_heat": {
+						heat: 0.0f
+						ticks: 0L
+					}
+				}
+				id: "tfchotornot:tongs/copper"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "0163716801B97211"
+			size: 1.5d
+			tasks: [{
+				id: "395FE1B6181F879C"
+				type: "checkmark"
+			}]
+			title: "注意你的体温！"
+			x: 0.0d
+			y: -0.75d
+		}
+		{
+			dependencies: ["7B9C628B00BC9EC4"]
+			description: [
+				"终于，你可以使用斧头来砍树了。"
+				""
+				"原木的用途非常广泛，从作为保持篝火燃烧的关键，到烧制物品时坑窑使用的燃料，原木无处不在。最好多储备一些。"
+			]
+			hide_until_deps_complete: true
+			id: "12861FF6D37BD26C"
+			subtitle: "第一块木头"
+			tasks: [{
+				count: 16L
+				id: "7EC840CACE881D51"
+				item: {
+					Count: 1
+					id: "ftbfiltersystem:smart_filter"
+					tag: {
+						"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(tfc:log_pile_logs)"
+					}
+				}
+				title: "任意原木"
+				type: "item"
+			}]
+			title: "收集原木"
+			x: 0.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["7B9C628B00BC9EC4"]
+			description: [
+				"&b使用刀具砍掉地上随处可见的大部分草类即可获得干草。"
+				""
+				"干草同样是石器时代重要的材料。不仅可以增加点火的成功概率，作为坑窑的必须材料，还可以编织出草篮以节省并不充裕的物品栏空间。"
+			]
+			hide_until_deps_complete: true
+			id: "6A133E91B415D7F5"
+			subtitle: "植物纤维!"
+			tasks: [{
+				count: 8L
+				id: "06BA3F48765662A1"
+				item: "tfc:straw"
+				type: "item"
+			}]
+			title: "收集干草"
+			x: 1.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["6A133E91B415D7F5"]
+			description: ["草篮是一种简易存储容器，可存储最多四组非食物的物品，能够帮助你节省你的物品栏空间。"]
+			hide_until_deps_complete: true
+			id: "23FF467A99430E56"
+			subtitle: "节省你的物品栏！"
+			tasks: [{
+				id: "104C397E2494A018"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						Parent: {
+							Items: [ ]
+							voidSlots: [I; ]
+						}
+					}
+					id: "sns:straw_basket"
+				}
+				type: "item"
+			}]
+			x: 3.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["7B9C628B00BC9EC4"]
+			description: [
+				"生火是人类历史上革命性的发明。在人类历史的最早期，取火的标准方法是用两根木棍钻木取火。"
+				""
+				"&b使用两根木棍合成起火器，对准目标右键按住就能够有一定概率生火。"
+			]
+			hide_until_deps_complete: true
+			id: "28B222CB0CB90489"
+			subtitle: "火！"
+			tasks: [{
+				id: "52BD0AD6AD33D365"
+				item: {
+					Count: 1
+					id: "tfc:firestarter"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			x: -1.0d
+			y: 3.5d
+		}
+		{
+			dependencies: [
+				"12861FF6D37BD26C"
+				"6A133E91B415D7F5"
+				"28B222CB0CB90489"
+			]
+			description: [
+				"&6终于，你燃起了第一束篝火，在这个残酷的大自然迈出了关键的第一步。"
+				""
+				"将三根木棍，一根原木和可选的少许干草、松果等助燃剂放在一个格子内，然后用起火器右键点燃。"
+				"{image:ftbquests:textures/picture/fire_pre.png width:150 height:100 align:center}"
+				"篝火的用途非常广泛，现阶段就能够起到提供热量，制作一些简单物品和烹饪（如火把）的作用。未来，我们还能在上面架起一口锅，进行更高级的烹饪，制作更美味的食品。不过当下，还是先着手继续我们的旅程吧。"
+				""
+				"&e提示：篝火是会烧完的，记得及时在UI界面的左侧补充原木以保持燃烧。"
+				"{image:ftbquests:textures/picture/fire_fuel.png width:70 height:115 align:center}"
+				"&4警告：如果你在亚热带或者热带，最好不要离篝火太近。"
+			]
+			hide_until_deps_complete: true
+			icon: "tfc:firepit"
+			id: "33D435386F4F65FF"
+			shape: "none"
+			size: 2.0d
+			tasks: [{
+				id: "09995F36F0AB3A07"
+				type: "checkmark"
+			}]
+			title: "篝火"
+			x: 0.0d
+			y: 5.5d
+		}
+		{
+			dependencies: ["33D435386F4F65FF"]
+			description: [
+				"火把不仅是非常便携的照明工具，还可用于点燃坑窑等设备以代替起火器。不过和原版不同的是，这里的火把只能燃烧5天。"
+				""
+				"&6将木棍放入篝火内点燃以得到火把。"
+			]
+			hide_until_deps_complete: true
+			id: "602049450A8C2EBB"
+			tasks: [{
+				id: "1056AE30A79B81A6"
+				item: "tfc_aol:flaming_stake"
+				type: "item"
+			}]
+			x: -2.5d
+			y: 5.5d
+		}
+		{
+			dependencies: ["33D435386F4F65FF"]
+			description: [
+				"&e烹饪不仅是利用火转化食材的艺术，更是人类告别茹毛饮血、走向文明的标志性起点。"
+				""
+				"将任意你得到的肉制品放入篝火中烤熟。"
+			]
+			hide_until_deps_complete: true
+			id: "1ACE8DD74491A553"
+			subtitle: "烹饪！"
+			tasks: [{
+				id: "6F731CF667B1C9B8"
+				item: {
+					Count: 1
+					id: "ftbfiltersystem:smart_filter"
+					tag: {
+						"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(tfc:foods/cooked_meats)"
+					}
+				}
+				title: "Any #tfc:foods/cooked_meats"
+				type: "item"
+			}]
+			title: "熟制品"
+			x: 0.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["33D435386F4F65FF"]
+			description: [
+				""
+				"&b随着你制造出篝火，安全度过晚上并获取到干草，原木和木棍，我们可以开始尝试制造陶器了。"
+				""
+				"粘土是一种特别有用的材料，你可以用它制作陶器。一开始你可能难以找到粘土，因为它们总是隐藏在草皮之下。但简而言之，有两种获取它们的手段。粘土会在年降雨量大于175mm的区域中成片地大量生成，而且有几种特殊的植物会生长在粘土之上。"
+				""
+				"&e提示：有几种植物指示了附近可能存在粘土，它们是：蹄盖蕨、美人蕉、一枝黄花、蒲苇、分药花和水生美人蕉。其次，粘土也会在水源附近，比如河流、湖泊、或水池边，以小块的形式生成。"
+				""
+				"{image:ftbquests:textures/picture/clay_world.png width:150 height:100 align:center}"
+				"图中为世界中的粘土。"
+			]
+			hide_until_deps_complete: true
+			id: "1BC61A3834F0B4D8"
+			size: 2.0d
+			tasks: [{
+				count: 8L
+				id: "75D8A35B09BB10D8"
+				item: "minecraft:clay_ball"
+				type: "item"
+			}]
+			title: "粘土"
+			x: 3.0d
+			y: 5.5d
+		}
+		{
+			dependencies: ["1BC61A3834F0B4D8"]
+			description: [
+				"是时候开始捏制陶器了。"
+				""
+				"原始时期的陶器是人类在长期生产和生活实践中发明的重要器具，标志着人类开始走向定居和农耕生活。这些早期陶器主要以黏土为原料，通过手工捏塑或泥条盘筑成型。陶器的发明极大地方便了食物的烹煮、盛放和储存，改善了古人类的饮食结构和生活条件。"
+				""
+				"&e大缸拥有3*3的储物空间，不仅可以帮你节省物品栏，放在大缸中的食物还能够延长一倍的保质期。"
+				""
+				"&e小缸拥有2*2的储物空间，虽然也能帮你节省物品栏，但最重要的用途是进行金属熔炼。"
+			]
+			hide_until_deps_complete: true
+			id: "4B2BF6CBCCF3C23F"
+			tasks: [
+				{
+					id: "631DB92D4433AFF5"
+					item: {
+						Count: 1
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+						id: "tfc:ceramic/unfired_vessel"
+					}
+					type: "item"
+				}
+				{
+					id: "67E92A531FD08893"
+					item: {
+						Count: 1
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+						id: "tfc:ceramic/unfired_large_vessel"
+					}
+					type: "item"
+				}
+			]
+			title: "陶器"
+			x: 4.5d
+			y: 5.5d
+		}
+		{
+			dependencies: ["4B2BF6CBCCF3C23F"]
+			description: [
+				"&b现在是时候制作一个坑窑来烧制你的陶器了。"
+				""
+				"坑窑是一种原始加热方法，最高能把物品加热到1400℃。"
+				""
+				"&e先在地上挖一个一格深的洞，然后按V将陶器放进去："
+				""
+				"{image:ftbquests:textures/picture/pit_1.png width:100 height:90 align:center}"
+				"&e然后按右键放入八个干草："
+				"{image:ftbquests:textures/picture/pit_2.png width:100 height:130 align:center}"
+				"{@pagebreak}"
+				"&e最后放上八个原木："
+				"{image:ftbquests:textures/picture/pit_3.png width:100 height:150 align:center}"
+				"&e然后通过起火器或火把(丢在坑窑上,等待一会即可点燃）点燃坑窑。"
+			]
+			hide_until_deps_complete: true
+			icon: "tfc:wood/log/oak"
+			id: "3B9960C96DD3D684"
+			tasks: [
+				{
+					count: 8L
+					id: "7C13C4FB15941BF2"
+					item: "tfc:straw"
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "26E5BD71ED9CD315"
+					item: {
+						Count: 1
+						id: "ftbfiltersystem:smart_filter"
+						tag: {
+							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(forge:stripped_logs)"
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "坑窑"
+			x: 6.0d
+			y: 5.5d
+		}
+		{
+			dependencies: ["3B9960C96DD3D684"]
+			description: [""]
+			hide_until_deps_complete: true
+			id: "61BC88EE00BACB15"
+			tasks: [
+				{
+					id: "3FFF30C95625873B"
+					item: {
+						Count: 1
+						ForgeCaps: {
+							Parent: {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+						id: "tfc:ceramic/vessel"
+						tag: { }
+					}
+					type: "item"
+				}
+				{
+					id: "7D2AB09618F1ED61"
+					item: "tfc:ceramic/large_vessel"
+					type: "item"
+				}
+			]
+			title: "烧制完毕！"
+			x: 7.5d
+			y: 5.5d
+		}
+		{
+			dependencies: ["33D435386F4F65FF"]
+			description: [
+				"&b楔形石头的发明是新石器时代的里程碑。有史以来第一次，你能够对原木进行加工，做成各种复杂的木制品。"
+				""
+				"楔形石头可以用于切割原木，把原木加工成木板，而木板能够制作许多重要的东西，甚至包括——你的第一栋木结构房屋。"
+				""
+				"需要注意的是，楔形石头耐久度极低。"
+			]
+			hide_until_deps_complete: true
+			id: "0F3A930B11EDFADF"
+			shape: "circle"
+			size: 1.5d
+			subtitle: "原木加工！"
+			tasks: [{
+				id: "3E6B2EF30411B77E"
+				item: {
+					Count: 1
+					id: "co4tech:stone_saw"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			x: -1.5d
+			y: 7.5d
+		}
+		{
+			dependencies: ["0F3A930B11EDFADF"]
+			description: [
+				"木板是几乎一切高级木制品的基础。"
+				""
+				"&b用楔形石头加工原木得到木板。"
+			]
+			hide_until_deps_complete: true
+			icon: "tfc:wood/lumber/oak"
+			id: "07CBB05887A72067"
+			shape: "none"
+			size: 1.5d
+			subtitle: "原木加工！"
+			tasks: [{
+				count: 8L
+				id: "3B85982E597ABAA6"
+				item: {
+					Count: 1
+					id: "ftbfiltersystem:smart_filter"
+					tag: {
+						"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(tfc:lumber)"
+					}
+				}
+				title: "任意木材"
+				type: "item"
+			}]
+			title: "木材"
+			x: -5.25d
+			y: 7.5d
+		}
+		{
+			dependencies: ["07CBB05887A72067"]
+			description: [
+				"&b大桶是一种可以容纳物品和液体的设备。它不仅仅是简单的一个木桶，更是进行原始化学处理和早期手工业所必不可少的工具。"
+				""
+				"&e大桶的主要作用是用来混合某些液体和物品。用大桶合成时，必须注意桶内的液体和物品的比例是否正确无误，一些化学处理还需要将大桶密封一段时间才能执行。"
+			]
+			hide_until_deps_complete: true
+			icon: "tfc:wood/barrel/oak"
+			id: "0F85643D97855702"
+			shape: "none"
+			size: 1.5d
+			subtitle: "化...学?"
+			tasks: [{
+				id: "72766DDBCFA53D01"
+				item: {
+					Count: 1
+					id: "ftbfiltersystem:smart_filter"
+					tag: {
+						"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(tfc:barrels)"
+					}
+				}
+				title: "Any #tfc:barrels"
+				type: "item"
+			}]
+			title: "大桶"
+			x: -9.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["07CBB05887A72067"]
+			description: ["终于，你可以开始建造你的第一栋木结构房屋了。用四块加工完成的木材合成木板。"]
+			hide_until_deps_complete: true
+			icon: "tfc:wood/planks/oak"
+			id: "4B8844ED79277731"
+			shape: "none"
+			size: 1.5d
+			tasks: [{
+				count: 4L
+				id: "1C346629BF3F2342"
+				item: {
+					Count: 1
+					id: "ftbfiltersystem:smart_filter"
+					tag: {
+						"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(minecraft:planks)"
+					}
+				}
+				title: "Any #minecraft:planks"
+				type: "item"
+			}]
+			title: "木板"
+			x: -5.25d
+			y: 9.0d
+		}
+		{
+			dependencies: ["4B8844ED79277731"]
+			description: [
+				"&b干草块是会坍塌的，支撑不住房屋。因此，你可以使用木质框架，然后将干草填充进去得到茅草屋顶。"
+				""
+				"楼梯和台阶也是可选的选择，自由发挥即可。"
+			]
+			id: "44D76F887E60340C"
+			tasks: [
+				{
+					id: "6E03AFDFCD993E73"
+					item: "rnr:roof_frame"
+					type: "item"
+				}
+				{
+					id: "1B64231B6B6F82F2"
+					item: "rnr:thatch_roof"
+					type: "item"
+				}
+			]
+			x: -5.5d
+			y: 10.5d
+		}
+		{
+			dependencies: ["4B8844ED79277731"]
+			id: "20E5A31795CA2D42"
+			optional: true
+			tasks: [{
+				id: "1F800F8A31A0CF0A"
+				item: {
+					Count: 1
+					id: "ftbfiltersystem:smart_filter"
+					tag: {
+						"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(forge:fences)"
+					}
+				}
+				title: "Any #forge:fences"
+				type: "item"
+			}]
+			title: "木制栏杆"
+			x: -6.5d
+			y: 10.5d
+		}
+		{
+			dependencies: ["33D435386F4F65FF"]
+			description: [
+				"锤子用途广泛，可以用来做裂纹砖，敲碎南瓜等大型植物，不过前期最重要的用途可能是制作原始砧。"
+				""
+				"在任意石头上敲击一下即可得到原始砧。"
+			]
+			hide_until_deps_complete: true
+			id: "47BD7D650559D86B"
+			size: 1.5d
+			tasks: [{
+				id: "0825FB34B077D61B"
+				item: {
+					Count: 1
+					id: "tfc:stone/hammer/igneous_extrusive"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			x: 1.5d
+			y: 7.5d
+		}
+		{
+			dependencies: ["47BD7D650559D86B"]
+			description: ["用刀对你收集到的谷物进行加工即可得到谷物粒。"]
+			hide_until_deps_complete: true
+			id: "5FA67942BFDE3094"
+			optional: true
+			tasks: [{
+				id: "293B7C5412767345"
+				item: {
+					Count: 1
+					id: "ftbfiltersystem:smart_filter"
+					tag: {
+						"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(tfc:foods/grains)"
+					}
+				}
+				title: "Any #tfc:foods/grains"
+				type: "item"
+			}]
+			title: "谷物粒"
+			x: 2.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["5FA67942BFDE3094"]
+			description: ["用原始砧将麦粒敲碎，即可获得麦片。麦片能够提供一些谷物营养，但微乎其微，我们最好还是继续加工一下。"]
+			id: "4933D53C56CA8537"
+			optional: true
+			tasks: [{
+				id: "2038F2674BEE7169"
+				item: {
+					Count: 1
+					id: "ftbfiltersystem:smart_filter"
+					tag: {
+						"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(bsa:foods/crushed_grains)"
+					}
+				}
+				title: "麦片"
+				type: "item"
+			}]
+			title: "麦片"
+			x: 3.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["4933D53C56CA8537"]
+			description: ["接下来将麦片加工为粗面粉。"]
+			id: "10D4607543FD47A3"
+			optional: true
+			tasks: [{
+				id: "44C73D7838C3CF85"
+				item: {
+					Count: 1
+					id: "ftbfiltersystem:smart_filter"
+					tag: {
+						"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(tfc:coarse_flour)"
+					}
+				}
+				title: "粗面粉"
+				type: "item"
+			}]
+			title: "粗面粉"
+			x: 4.0d
+			y: 9.0d
+		}
+		{
+			dependencies: [
+				"10D4607543FD47A3"
+				"37563DE9B098FB8C"
+			]
+			description: [""]
+			hide_until_deps_complete: true
+			id: "591AE5DF4950407E"
+			optional: true
+			tasks: [{
+				id: "7E8D76B6A69732C3"
+				item: {
+					Count: 1
+					id: "ftbfiltersystem:smart_filter"
+					tag: {
+						"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(tfc:foods/dough)"
+					}
+				}
+				title: "面团"
+				type: "item"
+			}]
+			x: 5.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["3B85982E597ABAA6"]
+			hide_until_deps_complete: true
+			id: "37563DE9B098FB8C"
+			tasks: [{
+				id: "3BFDAEE5FC8E5E7C"
+				item: "tfc:wooden_bucket"
+				type: "item"
+			}]
+			x: 5.0d
+			y: 10.0d
+		}
+		{
+			dependencies: ["591AE5DF4950407E"]
+			description: ["将粗饼面团放在篝火上烤即可获得粗饼。现在好好享用一番吧，虽然没那么好吃，但总归能补充谷物营养，不是么？"]
+			hide_until_deps_complete: true
+			id: "1763307F94BFEDDD"
+			optional: true
+			tasks: [{
+				id: "5B53E4B5B23EB0B6"
+				item: {
+					Count: 1
+					id: "ftbfiltersystem:smart_filter"
+					tag: {
+						"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(firmalife:foods/flatbreads)"
+					}
+				}
+				title: "粗饼"
+				type: "item"
+			}]
+			x: 7.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["44D76F887E60340C"]
+			id: "69ADEAC07298D50B"
+			optional: true
+			tasks: [{
+				id: "7CA2B2B107E6790C"
+				item: {
+					Count: 1
+					id: "ftbfiltersystem:smart_filter"
+					tag: {
+						"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(tfc:mud_bricks)"
+					}
+				}
+				title: "泥砖"
+				type: "item"
+			}]
+			x: -5.5d
+			y: 11.5d
+		}
+		{
+			dependencies: ["33D435386F4F65FF"]
+			hide_until_deps_complete: true
+			id: "484B90B297384F30"
+			tasks: [{
+				id: "157A3C992FC45E1B"
+				item: {
+					Count: 1
+					id: "tfc:stone/hoe/igneous_extrusive"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			x: 3.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["0F85643D97855702"]
+			id: "6A0D1A82ECA6D73C"
+			tasks: [{
+				id: "1D26B538D5830333"
+				item: "tfc:large_raw_hide"
+				type: "item"
+			}]
+			x: -9.0d
+			y: 5.5d
+		}
+		{
+			dependencies: [
+				"6A0D1A82ECA6D73C"
+				"0578CD5BCDD86E45"
+			]
+			hide_until_deps_complete: true
+			id: "54453AEBC325ECCC"
+			tasks: [{
+				id: "5BFD6293ED9233BD"
+				item: "tfc:large_soaked_hide"
+				type: "item"
+			}]
+			x: -9.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["54453AEBC325ECCC"]
+			id: "780B907CA0CA1A4B"
+			tasks: [{
+				id: "1710BA7ED41CD9C8"
+				item: "tfc:large_scraped_hide"
+				type: "item"
+			}]
+			x: -9.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["780B907CA0CA1A4B"]
+			id: "598EB9C7B3D01B85"
+			tasks: [{
+				id: "7C1A9174D563A112"
+				item: "tfc:large_prepared_hide"
+				type: "item"
+			}]
+			x: -10.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["598EB9C7B3D01B85"]
+			id: "1D47B439932844C4"
+			tasks: [{
+				id: "329165BDDCCC5FB7"
+				item: "minecraft:leather"
+				type: "item"
+			}]
+			x: -12.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["3B85982E597ABAA6"]
+			description: ["通过燃烧木头，把火把丢入水中等方式得到草木灰，再将草木灰放在大桶中溶于水得到碱液。碱液是鞣制皮革的重要原料之一。"]
+			hide_until_deps_complete: true
+			id: "0578CD5BCDD86E45"
+			tasks: [{
+				id: "17AA51EF9081489A"
+				item: "tfc:powder/wood_ash"
+				type: "item"
+			}]
+			x: -10.5d
+			y: 4.0d
+		}
+		{
+			dependencies: ["07CBB05887A72067"]
+			hide_until_deps_complete: true
+			id: "0BA1545CFE17FC5C"
+			tasks: [{
+				id: "59AC21B2B742A7C0"
+				item: {
+					Count: 1
+					id: "ftbfiltersystem:smart_filter"
+					tag: {
+						"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(forge:chests/wooden)"
+					}
+				}
+				title: "Any #forge:chests/wooden"
+				type: "item"
+			}]
+			title: "箱子！"
+			x: -6.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["61BC88EE00BACB15"]
+			hide_until_deps_complete: true
+			id: "6E93700D4E4CD5AE"
+			tasks: [{
+				id: "3DAF2120D824994E"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "tfc:ore/small_native_copper"
+				}
+				type: "item"
+			}]
+			x: 8.5d
+			y: 5.5d
+		}
+		{
+			dependencies: ["6E93700D4E4CD5AE"]
+			hide_until_deps_complete: true
+			icon: {
+				Count: 1
+				ForgeCaps: {
+					"tfc:item_heat": {
+						heat: 0.0f
+						ticks: 0L
+					}
+				}
+				id: "gtceu:bronze_ingot"
+			}
+			id: "3785A62E758808BE"
+			shape: "gear"
+			size: 2.0d
+			tasks: [
+				{
+					count: 8L
+					id: "5FAFFBFCEA80CA08"
+					item: {
+						Count: 1
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+						id: "tfc:ore/small_native_copper"
+					}
+					type: "item"
+				}
+				{
+					count: 200L
+					id: "166D3CF4C7367479"
+					item: {
+						Count: 1
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+						id: "gtceu:silver_nugget"
+					}
+					type: "item"
+				}
+			]
+			title: "研究：青铜时代"
+			x: 10.0d
+			y: 5.5d
+		}
+		{
+			dependencies: ["20E5A31795CA2D42"]
+			description: ["你可以用木材制作各种木制家具来装饰你的新家。这只是其中一个例子。"]
+			id: "37FC04B68080D578"
+			optional: true
+			tasks: [
+				{
+					id: "697AD565BF943328"
+					item: "mcw_tfc_aio:furniture/oak_furniture/oak_chair"
+					type: "item"
+				}
+				{
+					id: "57DA3A7DD256655A"
+					item: "mcw_tfc_aio:furniture/oak_furniture/oak_wardrobe"
+					type: "item"
+				}
+			]
+			x: -6.5d
+			y: 11.5d
+		}
+		{
+			dependencies: ["07CBB05887A72067"]
+			hide_until_deps_complete: true
+			id: "02A82272883B9296"
+			shape: "rsquare"
+			size: 1.25d
+			tasks: [{
+				id: "686C9924DE174E22"
+				item: {
+					Count: 1
+					id: "ftbfiltersystem:smart_filter"
+					tag: {
+						"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(tfc:looms)"
+					}
+				}
+				title: "Any #tfc:looms"
+				type: "item"
+			}]
+			x: -5.25d
+			y: 6.0d
+		}
+		{
+			dependencies: ["02A82272883B9296"]
+			id: "2E36B0FD59F11F5F"
+			tasks: [{
+				id: "2D996589EE1ABDEE"
+				item: "tfc:burlap_cloth"
+				type: "item"
+			}]
+			x: -6.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["02A82272883B9296"]
+			id: "27CF2A67EF36C18B"
+			tasks: [{
+				id: "7835B6E0EC2FD8F8"
+				item: "tfc:wool_cloth"
+				type: "item"
+			}]
+			x: -5.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["02A82272883B9296"]
+			id: "348420D49F0B57CF"
+			tasks: [{
+				id: "1DC9FAEB0698E409"
+				item: "tfc:silk_cloth"
+				type: "item"
+			}]
+			x: -4.5d
+			y: 4.5d
+		}
+		{
+			dependencies: [
+				"348420D49F0B57CF"
+				"27CF2A67EF36C18B"
+			]
+			dependency_requirement: "one_completed"
+			id: "48D672184E13A62D"
+			shape: "rsquare"
+			size: 2.0d
+			tasks: [{
+				id: "5206C38E5D778C2F"
+				item: "minecraft:white_bed"
+				type: "item"
+			}]
+			x: -5.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["2E36B0FD59F11F5F"]
+			id: "41F52C17A8656390"
+			optional: true
+			tasks: [
+				{
+					id: "65C2B0DECE88FE12"
+					item: {
+						Count: 1
+						id: "tfcambiental:burlap_cowl"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "4DF42C88F0DBC6C9"
+					item: {
+						Count: 1
+						id: "tfcambiental:burlap_shirt"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "01F4829EA528FAC6"
+					item: {
+						Count: 1
+						id: "tfcambiental:burlap_pants"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "2595D7BDF5AF9F47"
+					item: {
+						Count: 1
+						id: "tfcambiental:burlap_shoes"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "7D3BBDD5C2B63C2C"
+					item: {
+						Count: 1
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+						id: "tfchotornot:burlap_potholder"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -7.5d
+			y: 4.5d
+		}
+		{
+			dependencies: [
+				"2E36B0FD59F11F5F"
+				"27CF2A67EF36C18B"
+			]
+			id: "5C37F08BC8040359"
+			tasks: [
+				{
+					id: "116E3D33C4FE7F42"
+					item: {
+						Count: 1
+						ForgeCaps: {
+							Parent: {
+								Items: [ ]
+								voidSlots: [I; ]
+							}
+						}
+						id: "sns:seed_pouch"
+					}
+					type: "item"
+				}
+				{
+					id: "21AA21015972E118"
+					item: {
+						Count: 1
+						ForgeCaps: {
+							Parent: {
+								Items: [ ]
+								voidSlots: [I; ]
+							}
+						}
+						id: "sns:ore_sack"
+					}
+					type: "item"
+				}
+				{
+					id: "4A13281350E00ACC"
+					item: {
+						Count: 1
+						ForgeCaps: {
+							Parent: {
+								Items: [ ]
+								voidSlots: [I; ]
+							}
+						}
+						id: "sns:burlap_sack"
+					}
+					type: "item"
+				}
+			]
+			x: -6.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["4B8844ED79277731"]
+			hide_until_deps_complete: true
+			icon: "tfc:wood/planks/oak_workbench"
+			id: "5BFE6C76195A44E0"
+			shape: "none"
+			size: 2.0d
+			subtitle: "嗯，一个工作台。"
+			tasks: [{
+				id: "2878C3DF69F391F7"
+				item: {
+					Count: 1
+					id: "ftbfiltersystem:smart_filter"
+					tag: {
+						"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(tfc:workbenches)"
+					}
+				}
+				title: "任意工作台"
+				type: "item"
+			}]
+			title: "工作台"
+			x: -4.0d
+			y: 11.0d
+		}
+		{
+			dependencies: ["0BA1545CFE17FC5C"]
+			id: "2DA04777259B1982"
+			optional: true
+			shape: "gear"
+			size: 1.0d
+			tasks: [{
+				id: "49F4723C34C29D87"
+				item: {
+					Count: 1
+					id: "ftbfiltersystem:smart_filter"
+					tag: {
+						"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(storagedrawers:drawers)"
+					}
+				}
+				title: "Any #storagedrawers:drawers"
+				type: "item"
+			}]
+			title: "储物抽屉"
+			x: -7.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["3785A62E758808BE"]
+			id: "18A6108962147956"
+			rewards: [{
+				auto: "invisible"
+				icon: {
+					Count: 1
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "gtceu:bronze_ingot"
+				}
+				id: "16B233B75E62E687"
+				ignore_reward_blocking: true
+				stage: "copper_age"
+				title: "铜器时代"
+				type: "gamestage"
+			}]
+			shape: "diamond"
+			tasks: [{
+				elapsedTime: 240L
+				gameTime: "system"
+				id: "2C6AF8AD0C0B7482"
+				title: "研究时间：四分钟"
+				type: "questsadditions:time"
+			}]
+			x: 11.5d
+			y: 5.5d
+		}
+		{
+			dependencies: ["47BD7D650559D86B"]
+			id: "2EFDAB700A92B8AB"
+			optional: true
+			tasks: [
+				{
+					id: "73FA9C17E9960F44"
+					item: {
+						Count: 1
+						ForgeCaps: {
+							"tfc:food": {
+								creationDate: 312000L
+								traits: [ ]
+							}
+						}
+						id: "tfc:food/pumpkin_chunks"
+					}
+					type: "item"
+				}
+				{
+					id: "41E13EC9F68ABA74"
+					item: "minecraft:melon_slice"
+					type: "item"
+				}
+			]
+			x: 1.0d
+			y: 9.0d
+		}
+	]
+	title: "Part 1 新石器时代"
+}

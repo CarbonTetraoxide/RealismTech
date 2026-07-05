@@ -1,0 +1,9 @@
+#Whether to limit world generation to fit the Craster Parabolic map projection. Takes precedence over finiteContinents.
+craterParabolicMapProjection = true
+#Whether to teleport players crossing the 180° to the other side of the world.
+crossing180MeridianTeleport = true
+#Whether to prevent island and hotspot volcanoes outside the "world".
+keepIslandsAndHotspotVolcanoesInside = true
+#Prevents the world from spawning repeating temperature and rainfall bands. Almost the same as the 1.21.1 TFC world gen option. Ignored if craterParabolicMapProjection is enabled.
+finiteContinents = true
+

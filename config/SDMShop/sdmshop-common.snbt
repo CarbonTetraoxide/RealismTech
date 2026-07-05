@@ -1,0 +1,29 @@
+{
+	client: {
+		# Default: "blockymodern"
+		# Valid values: "modern", "blockymodern"
+		ui_style: "modern"
+		caching: {
+			# Allows you to reduce the load on the network by caching store data on the player's client. In this case, the player will be able to copy your store data without any obstacles.
+			# Default: true
+			use_cached_shop_data: true
+		}
+	}
+	server: {
+		# The store ID that you specify when creating via /sdmshop create_shop <id>. After specifying the ID, clicking on the store button or the button in the menu will open the current store.
+		# Default: "default"
+		default_shop_id: "default"
+		
+		# Determines if the client is allowed to request opening a shop (e.g., via keybindings). If enabled, shops can only be opened by the server using the /sdmshop open_shop <player> <shopId> command. Useful for custom shop implementations.
+		# Default: false
+		disable_key_bind: false
+		
+		# Whether to display a notification in chat about purchasing an item.
+		# Default: true
+		send_notify: true
+		
+		# Debugging messages when editing, purchasing, etc. It is recommended to enable them when editing.
+		# Default: true
+		show_admin_messages: true
+	}
+}

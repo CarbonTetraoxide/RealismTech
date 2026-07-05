@@ -1,0 +1,148 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "part_2"
+	group: "1651D054AF4757A0"
+	icon: {
+		Count: 1
+		ForgeCaps: {
+			"tfc:item_heat": {
+				heat: 0.0f
+				ticks: 0L
+			}
+		}
+		id: "gtceu:bronze_ingot"
+	}
+	id: "053E2A2841060610"
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["6F470FD4A12F0BD5"]
+			icon: {
+				Count: 1
+				ForgeCaps: {
+					"tfc:item_heat": {
+						heat: 0.0f
+						ticks: 0L
+					}
+				}
+				id: "minecraft:copper_ingot"
+			}
+			id: "77C71E9E5DC54C7C"
+			shape: "rsquare"
+			size: 4.0d
+			tasks: [{
+				icon: {
+					Count: 1
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "minecraft:copper_ingot"
+				}
+				id: "6D0572CDB4618FD8"
+				stage: "bronze_age"
+				title: "研究：青铜时代"
+				type: "gamestage"
+			}]
+			x: 3.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["77C71E9E5DC54C7C"]
+			icon: {
+				Count: 1
+				ForgeCaps: {
+					Parent: {
+						heat: 0.0f
+						ticks: 0L
+					}
+				}
+				id: "tfc:ceramic/ingot_mold"
+			}
+			id: "71E7D2D83F459653"
+			shape: "gear"
+			size: 2.0d
+			tasks: [
+				{
+					consume_items: true
+					count: 60L
+					id: "51ADA4CF3F8ABEB2"
+					item: {
+						Count: 1
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+						id: "gtceu:silver_nugget"
+					}
+					type: "item"
+				}
+				{
+					consume_items: true
+					count: 64L
+					id: "70720C64287D7AB2"
+					item: "minecraft:clay_ball"
+					type: "item"
+				}
+				{
+					consume_items: true
+					count: 4L
+					id: "7F19BC80E4B6456D"
+					item: {
+						Count: 1
+						ForgeCaps: {
+							Parent: {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+						id: "tfc:ceramic/vessel"
+						tag: { }
+					}
+					type: "item"
+				}
+			]
+			title: "研究：熔铸技术"
+			x: 0.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["71E7D2D83F459653"]
+			id: "5A4298CC986BCDB4"
+			rewards: [{
+				auto: "invisible"
+				icon: {
+					Count: 1
+					ForgeCaps: {
+						Parent: {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "tfc:ceramic/ingot_mold"
+				}
+				id: "2E55A831C6A32096"
+				ignore_reward_blocking: true
+				stage: "casting"
+				title: "熔铸技术"
+				type: "gamestage"
+			}]
+			shape: "diamond"
+			tasks: [{
+				elapsedTime: 240L
+				id: "7645729D39E68F33"
+				title: "研究时间：四分钟"
+				type: "questsadditions:time"
+			}]
+			x: -1.5d
+			y: 7.5d
+		}
+	]
+	title: "Part 2 铜器（青铜）时代"
+}

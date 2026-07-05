@@ -1,0 +1,33 @@
+
+#TFC Sleep - sleep deprivation as a TerraFirmaCraft need.
+#All *_HOURS values are in-game hours (1 in-game hour = 1000 ticks).
+[stages]
+	#Hours awake before the very first symptoms appear (occasional yawns and short blinks). Below this nothing happens.
+	#Range: 0.0 ~ 1000.0
+	stage1Hours = 30.0
+	#Hours awake for the 'tired' stage: more frequent and longer blinks, first faint hallucination cues.
+	#Range: 0.0 ~ 1000.0
+	stage2Hours = 48.0
+	#Hours awake for the 'severe' stage: long micro-sleeps, the watcher appears, nausea/trembling.
+	#Range: 0.0 ~ 1000.0
+	stage3Hours = 72.0
+	#Hours awake for the 'critical' stage: near-constant micro-sleeps and heavy hallucinations.
+	#Range: 0.0 ~ 1000.0
+	stage4Hours = 96.0
+	#Hours awake at which a fatal heart attack can strike. Risk escalates the longer this is exceeded.
+	#Range: 0.0 ~ 1000.0
+	deathHours = 120.0
+
+#Feature toggles
+[features]
+	#Allow sleeping at any time of day, not just at night.
+	allowDaytimeSleep = true
+	#Scale how much time a sleep skips with how tired the player was (more tired = sleeps longer).
+	variableSleepLength = true
+	#Apply vanilla status effects (weakness, mining fatigue, nausea, etc.) as tiredness grows.
+	enableStatusEffects = true
+	#Enable hallucinations (distant watcher, unsettling sounds) at high tiredness.
+	enableHallucinations = true
+	#Allow death by heart attack from extreme sleep deprivation.
+	enableDeath = true
+

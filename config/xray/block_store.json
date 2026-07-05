@@ -1,0 +1,93 @@
+[
+  {
+    "name": "»¨¸ÚÑÒ´ÅÌú¿ó",
+    "blockName": "tfc:ore/normal_magnetite/granite",
+    "order": 1,
+    "color": 42495,
+    "drawing": false
+  },
+  {
+    "name": "¸»¼¯ÀùÑÒ´ÅÌú¿ó",
+    "blockName": "tfc:ore/rich_magnetite/conglomerate",
+    "order": 4,
+    "color": 42495,
+    "drawing": false
+  },
+  {
+    "name": "°åÑÒÍ­¿óÊ¯",
+    "blockName": "gtceu:slate_copper_ore",
+    "order": 5,
+    "color": 42495,
+    "drawing": false
+  },
+  {
+    "name": "»¨¸ÚÑÒ´ÅÌú¿ó¿óÊ¯",
+    "blockName": "gtceu:granite_magnetite_ore",
+    "order": 9,
+    "color": 42495,
+    "drawing": false
+  },
+  {
+    "name": "³àÌú¿óÁ£",
+    "blockName": "tfc:ore/small_hematite",
+    "order": 7,
+    "color": 42495,
+    "drawing": false
+  },
+  {
+    "name": "ÀùÑÒ´ÅÌú¿ó",
+    "blockName": "tfc:ore/normal_magnetite/conglomerate",
+    "order": 2,
+    "color": 42495,
+    "drawing": false
+  },
+  {
+    "name": "Æ¶ñ¤ÀùÑÒ´ÅÌú¿ó",
+    "blockName": "tfc:ore/poor_magnetite/conglomerate",
+    "order": 3,
+    "color": 42495,
+    "drawing": false
+  },
+  {
+    "name": "´Ö³àÌú¿ó¿é",
+    "blockName": "gtceu:raw_hematite_block",
+    "order": 6,
+    "color": 42495,
+    "drawing": false
+  },
+  {
+    "name": "»¨¸ÚÑÒÉ°Àù",
+    "blockName": "tfc:rock/gravel/granite",
+    "order": 11,
+    "color": 42495,
+    "drawing": false
+  },
+  {
+    "name": "ÀùÑÒ³àÌú¿ó",
+    "blockName": "tfc:ore/normal_hematite/conglomerate",
+    "order": 10,
+    "color": 42495,
+    "drawing": false
+  },
+  {
+    "name": "ĞşÎäÑÒ´ÅÌú¿ó¿óÊ¯",
+    "blockName": "gtceu:basalt_magnetite_ore",
+    "order": 8,
+    "color": 42495,
+    "drawing": false
+  },
+  {
+    "name": "°×¸ßÁëÍÁ",
+    "blockName": "tfc:white_kaolin_clay",
+    "order": 13,
+    "color": 42495,
+    "drawing": true
+  },
+  {
+    "name": "Ò³ÑÒÌìÈ»¼î¿óÊ¯",
+    "blockName": "gtceu:shale_trona_ore",
+    "order": 12,
+    "color": 42495,
+    "drawing": false
+  }
+]

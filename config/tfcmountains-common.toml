@@ -1,0 +1,15 @@
+#TFC Mountains Configuration
+#Vertical scale multiplier for mountains. Default is 2.0 (2x taller than vanilla TFC).
+#Range: 0.1 ~ 20.0
+heightScale = 2.0
+#Horizontal scale multiplier for mountains. Default is 2.0 (2x wider than vanilla TFC).
+#Range: 0.1 ~ 20.0
+horizontalScale = 2.0
+#If true, all mountains will generate snow caps regardless of the surrounding climate.
+snowCaps = false
+#The Y level above which snow caps will form (if snowCaps is enabled). Default is 187.
+#Range: 0 ~ 512
+snowLineY = 187
+#If true, TFC's natural climate-based snow will also be prevented below snowLineY. Keep disabled if you prefer vanilla TFC snow behaviour in colder climates.
+enforceSnowLine = false
+

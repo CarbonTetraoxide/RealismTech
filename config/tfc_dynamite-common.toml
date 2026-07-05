@@ -1,0 +1,241 @@
+
+#Crude Dynamite - basic tier, no caps, no tunneling
+[crude_dynamite]
+	#Explosion power when placed exposed (not embedded)
+	#Range: 0.1 ~ 100.0
+	exposed_power = 3.0
+	#Explosion power when embedded on top of a block (FACING=UP, blast goes down)
+	#Range: 0.1 ~ 100.0
+	embedded_top_power = 7.0
+	#Blast origin offset from block surface (top placement)
+	#Range: 0.0 ~ 10.0
+	embedded_top_depth = 1.6
+	#Explosion power when embedded on a wall (FACING=N/S/E/W)
+	#Range: 0.1 ~ 100.0
+	embedded_side_power = 7.0
+	#Blast origin offset from block surface (side placement)
+	#Range: 0.0 ~ 10.0
+	embedded_side_depth = 1.6
+	#Explosion power when embedded on underside (FACING=DOWN, blast goes up)
+	#Range: 0.1 ~ 100.0
+	embedded_bottom_power = 7.0
+	#Blast origin offset from block surface (bottom placement)
+	#Range: 0.0 ~ 10.0
+	embedded_bottom_depth = 1.6
+
+#Half-Stable Dynamite - lightweight earthmoving tier, 1 crude compound, no cap/tunnel/quarry, 100% block drops
+[half_stable_dynamite]
+	#Explosion power when placed exposed (not embedded). Default 3.5 — between crude (3.0) and stable (4.0).
+	#Range: 0.1 ~ 100.0
+	exposed_power = 3.5
+	#Explosion power when embedded on top of a block (FACING=UP). Default 8.0 — roughly half stable's 16.0.
+	#Range: 0.1 ~ 100.0
+	embedded_top_power = 8.0
+	#Blast origin offset from block surface (top placement).
+	#Range: 0.0 ~ 10.0
+	embedded_top_depth = 1.6
+	#Explosion power when embedded on a wall (FACING=N/S/E/W). Default 8.0.
+	#Range: 0.1 ~ 100.0
+	embedded_side_power = 8.0
+	#Blast origin offset from block surface (side placement).
+	#Range: 0.0 ~ 10.0
+	embedded_side_depth = 1.6
+	#Explosion power when embedded on underside (FACING=DOWN). Default 8.0.
+	#Range: 0.1 ~ 100.0
+	embedded_bottom_power = 8.0
+	#Blast origin offset from block surface (bottom placement).
+	#Range: 0.0 ~ 10.0
+	embedded_bottom_depth = 1.6
+
+#Stable Dynamite - mid tier, supports blasting caps, 100% block drops
+[stable_dynamite]
+	#Explosion power when placed exposed (not embedded)
+	#Range: 0.1 ~ 100.0
+	exposed_power = 4.0
+	#Explosion power when embedded on top of a block (FACING=UP, blast goes down)
+	#Range: 0.1 ~ 100.0
+	embedded_top_power = 16.0
+	#Blast origin offset from block surface (top placement)
+	#Range: 0.0 ~ 10.0
+	embedded_top_depth = 1.6
+	#Explosion power when embedded on a wall (FACING=N/S/E/W)
+	#Range: 0.1 ~ 100.0
+	embedded_side_power = 16.0
+	#Blast origin offset from block surface (side placement)
+	#Range: 0.0 ~ 10.0
+	embedded_side_depth = 1.6
+	#Explosion power when embedded on underside (FACING=DOWN, blast goes up)
+	#Range: 0.1 ~ 100.0
+	embedded_bottom_power = 16.0
+	#Blast origin offset from block surface (bottom placement)
+	#Range: 0.0 ~ 10.0
+	embedded_bottom_depth = 1.6
+	#Sequential explosion powers for large tunnel cap (3 blasts)
+	tunnel_large_powers = [6.0, 17.0, 12.0]
+	#Block spacing between tunnel explosions (large cap)
+	#Range: 1 ~ 20
+	tunnel_large_spacing = 3
+	#Tick delay between tunnel explosions (large cap)
+	#Range: 0 ~ 100
+	tunnel_large_delay = 2
+	#Sequential explosion powers for small tunnel cap (5 blasts)
+	tunnel_small_powers = [2.0, 8.0, 8.0, 8.0, 7.0]
+	#Range: 1 ~ 20
+	tunnel_small_spacing = 2
+	#Range: 0 ~ 100
+	tunnel_small_delay = 2
+
+#Reinforced Dynamite - top tier, supports blasting caps, 100% block drops
+[reinforced_dynamite]
+	#Explosion power when placed exposed
+	#Range: 0.1 ~ 100.0
+	exposed_power = 5.0
+	#Range: 0.1 ~ 100.0
+	embedded_top_power = 25.0
+	#Range: 0.0 ~ 10.0
+	embedded_top_depth = 1.5
+	#Range: 0.1 ~ 100.0
+	embedded_side_power = 25.0
+	#Range: 0.0 ~ 10.0
+	embedded_side_depth = 1.5
+	#Range: 0.1 ~ 100.0
+	embedded_bottom_power = 25.0
+	#Range: 0.0 ~ 10.0
+	embedded_bottom_depth = 1.5
+	#Sequential explosion powers for large tunnel cap (4 blasts)
+	tunnel_large_powers = [4.0, 17.0, 17.0, 12.0]
+	#Range: 1 ~ 20
+	tunnel_large_spacing = 3
+	#Range: 0 ~ 100
+	tunnel_large_delay = 2
+	#Sequential explosion powers for small tunnel cap (6 blasts)
+	tunnel_small_powers = [2.0, 8.0, 8.0, 8.0, 8.0, 7.0]
+	#Range: 1 ~ 20
+	tunnel_small_spacing = 2
+	#Range: 0 ~ 100
+	tunnel_small_delay = 2
+
+#Stable Quarry Dynamite - preserves blocks as rubble, mid tier
+[stable_quarry_dynamite]
+	#Range: 0.1 ~ 100.0
+	exposed_power = 2.0
+	#Range: 0.1 ~ 100.0
+	embedded_top_power = 2.0
+	#Range: 0.0 ~ 10.0
+	embedded_top_depth = 1.7
+	#Range: 0.1 ~ 100.0
+	embedded_side_power = 2.0
+	#Range: 0.0 ~ 10.0
+	embedded_side_depth = 1.7
+	#Range: 0.1 ~ 100.0
+	embedded_bottom_power = 2.0
+	#Range: 0.0 ~ 10.0
+	embedded_bottom_depth = 1.7
+	#Sequential explosion powers for large tunnel cap (3 blasts)
+	tunnel_large_powers = [1.9, 1.75, 1.66]
+	#Range: 1 ~ 20
+	tunnel_large_spacing = 3
+	#Range: 0 ~ 100
+	tunnel_large_delay = 2
+	#Sequential explosion powers for small tunnel cap (4 blasts)
+	tunnel_small_powers = [1.3, 1.3, 1.3, 1.3]
+	#Range: 1 ~ 20
+	tunnel_small_spacing = 2
+	#Range: 0 ~ 100
+	tunnel_small_delay = 2
+
+#Reinforced Quarry Dynamite - preserves blocks as rubble, top tier
+[reinforced_quarry_dynamite]
+	#Range: 0.1 ~ 100.0
+	exposed_power = 3.0
+	#Range: 0.1 ~ 100.0
+	embedded_top_power = 2.0
+	#Range: 0.0 ~ 10.0
+	embedded_top_depth = 1.5
+	#Range: 0.1 ~ 100.0
+	embedded_side_power = 2.0
+	#Range: 0.0 ~ 10.0
+	embedded_side_depth = 1.5
+	#Range: 0.1 ~ 100.0
+	embedded_bottom_power = 2.0
+	#Range: 0.0 ~ 10.0
+	embedded_bottom_depth = 1.5
+	#Sequential explosion powers for large tunnel cap (4 blasts)
+	tunnel_large_powers = [1.9, 1.75, 1.75, 1.66]
+	#Range: 1 ~ 20
+	tunnel_large_spacing = 3
+	#Range: 0 ~ 100
+	tunnel_large_delay = 2
+	#Sequential explosion powers for small tunnel cap (7 blasts)
+	tunnel_small_powers = [1.3, 1.3, 1.3, 1.3, 1.3, 1.3, 1.3]
+	#Range: 1 ~ 20
+	tunnel_small_spacing = 2
+	#Range: 0 ~ 100
+	tunnel_small_delay = 2
+
+#Danger System - dynamite explodes in inventory when player takes damage
+[danger_system]
+	#Ticks of continuous sprinting before crude dynamite explodes (20 ticks = 1 second)
+	#Range: 1 ~ 1200
+	sprint_threshold_ticks = 40
+	#Radius to check for fire blocks when player takes fire damage
+	#Range: 0.0 ~ 10.0
+	fire_check_radius = 2.0
+	#Damage types that won't trigger inventory explosions (e.g., fall, drown)
+	excluded_damage_paths = ["fall", "drown", "blast"]
+	#If true, player loses entire inventory on danger explosion death
+	wipe_inventory_on_death = true
+	#If true, show confirmation prompt before danger explosions
+	learning_mode_enabled = false
+	#Auto-reject learning mode prompt after this many seconds
+	#Range: 1 ~ 300
+	learning_mode_timeout_seconds = 10
+
+#Fuse Cord - links two dynamite blocks for near-instant chain detonation
+[fuse_cord]
+	#Maximum block distance allowed between two linked dynamite blocks
+	#Range: 1 ~ 64
+	max_link_distance = 16
+	#Ticks between sequential fuse cord detonations (20 ticks = 1 second)
+	#Range: 1 ~ 200
+	chain_delay_ticks = 15
+
+#Fuse Observer - bridges fuse cords with redstone without exploding
+[fuse_observer]
+	#When true, the observer forwards the chain speed flag unchanged.
+	#When false, it always resets to slow (full fuse burn) beyond the observer.
+	preserve_chain_speed = true
+	#How long (in ticks) the observer outputs a redstone signal after
+	#receiving a terminal fuse signal (no further links). 20 ticks = 1 second.
+	#Range: 1 ~ 200
+	redstone_output_ticks = 10
+	#How long (in ticks) the observer burns before firing outgoing cords,
+	#when triggered by a normal (slow) ignition. 20 ticks = 1 second.
+	#Chain-detonation (plunger) path uses fuseCord.chainDelayTicks instead.
+	#Range: 1 ~ 6000
+	fuse_ticks = 100
+
+#Quarry Dynamite behaviour — rubble reversion and chain detonation
+[quarry]
+	#Default ticks before quarry rubble reverts to original block (20 ticks = 1s). Applied at placement time; changing this mid-session only affects newly placed dynamite.
+	#Range: 1 ~ 72000
+	default_revert_ticks = 600
+	#Random spread (ticks) added to each rubble block's revert time so they don't all snap back simultaneously. 0 = all revert at the same tick.
+	#Range: 0 ~ 1200
+	stagger_window_ticks = 60
+	#Minimum explosion power required to chain-detonate a placed dynamite block. Blasts weaker than this value will not trigger nearby dynamite.
+	#Range: 0.1 ~ 100.0
+	chain_detonate_threshold = 2.0
+
+#Item expiry — how long dynamite components remain stable before degrading
+[expiry]
+	#TFC calendar years before stable/reinforced sticks and compounds degrade to crude equivalents. Crude items never expire.
+	#Range: 1 ~ 100
+	stick_expiry_years = 1
+	#TFC calendar months before stable nitroglycerin in inventory reverts to unstable nitroglycerin.
+	#Range: 1 ~ 120
+	nitroglycerin_reversion_months = 1
+	#TFC calendar days stable nitroglycerin can sit in an unsealed barrel before reverting to unstable. Clock resets when the barrel is resealed. Kept in days rather than months because this state is not persisted across server restarts.
+	#Range: 1 ~ 360
+	barrel_nitro_reversion_days = 1
+

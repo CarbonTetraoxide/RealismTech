@@ -1,0 +1,80 @@
+
+#只控制本模组管理的可种植内容是否自然生成；不会禁用方块、物品或手动种植逻辑。
+[wild_crops]
+	alfalfa = true
+	canola = true
+	cassava = true
+	lentil = true
+	peanut = true
+	radish = true
+
+[fruit_trees]
+	cherry = true
+	green_apple = true
+	lemon = true
+	olive = true
+	orange = true
+	peach = true
+	plum = true
+	red_apple = true
+
+[bamboo]
+	bamboo = true
+	golden_bamboo = true
+
+#只控制自然刷新选择，包括群系刷新和虫害系统选择的害虫；关闭后实体仍会注册，仍可通过刷怪蛋、命令或自定义脚本使用。
+[entity_spawns]
+	bison = true
+	leopard_seal = true
+	lemming = true
+	mongoose = true
+	jerboa = true
+
+#控制 1.21 风格的运行时积雪追赶后端；原版 1.20 的降雨和雷暴调度不会改变。
+[weather_runtime]
+	#重新进入未加载区块时最多执行的雪、冰、冰锥更新次数。数值越低，越接近周围已加载区块的变化速度。
+	#Range: 0 ~ 256
+	snow_max_accumulation_on_update = 64
+	#两次积雪尝试之间的游戏刻间隔。数值越低积雪越快，但运行时开销越高。
+	#Range: > 1
+	ticks_per_snow_accumulation = 80
+	#安排融雪尝试时套用在积雪间隔上的倍率。默认值 3 与 1.21 TFC 一致。
+	#Range: > 1
+	snow_melt_multiplier = 3
+
+#控制作物和结果植物使用当前季节降雨湿度，还是使用旧版年均湿度。
+[plant_hydration]
+	#设为 true 时，作物生长和作物提示使用当前季节降雨换算出的湿度。
+	crop_use_current_rainfall_hydration = true
+	#设为 true 时，果树、浆果灌木和香蕉植株使用当前季节降雨换算出的湿度。
+	fruit_use_current_rainfall_hydration = true
+
+#山脉 heightmap 的峰顶 cliff 噪声。改动只影响新生成区块。
+[mountain_heightmap]
+	#山脉在 y > 120 后额外叠加的峰顶 cliff 随机高度下限。默认 0 表示仍允许部分山没有明显 cliff 抬高。
+	#Range: 0.0 ~ 64.0
+	cliff_height_min = 0.0
+	#山脉在 y > 120 后额外叠加的峰顶 cliff 随机高度上限。TFC 原生正向上限为 25 格；默认值为 30 格。
+	#Range: 0.0 ~ 64.0
+	cliff_height_max = 30.0
+	#峰顶 cliff 从 0 渐变到实际抬高量所需的基础高度差比例下限。实际渐变高度 = 当前 cliff 抬高量 * ratio；0.25 约等于最陡每 1 格基础高度增加 4 格 cliff 抬高。
+	#Range: 0.01 ~ 4.0
+	cliff_fade_ratio_min = 0.25
+	#峰顶 cliff 从 0 渐变到实际抬高量所需的基础高度差比例上限。0.5 约等于每 1 格基础高度增加 2 格 cliff 抬高。
+	#Range: 0.01 ~ 4.0
+	cliff_fade_ratio_max = 0.5
+
+#控制本模组的山区地势抬高场。改动只影响新生成区块；在已有世界中途修改可能造成新旧区块地形边界。
+[terrain_uplift]
+	#设为 false 时关闭本模组的山区地势抬高场；不会改变群系选择或普通 TFC 地形地物。
+	enabled = true
+	#单个地势抬高源的强度参数，之后还会经过河流、湖泊、海岸和多源融合折算；默认 150.0 实际约按 15.8% 增加高山最高高度
+	#Range: 0.0 ~ 4096.0
+	source_height = 150.0
+	#普通点源从平台边缘衰减到 0 的距离，单位为方块。默认 590 加上 10 格平台半径，约等于从中心到外缘 600 格。
+	#Range: 1 ~ 2048
+	source_falloff_distance = 590
+	#普通山地和线状火山抬高源中心平缓平台半径，单位为方块。盾火山仍使用自己的动态平台大小。
+	#Range: 0 ~ 256
+	small_platform_radius = 10
+
