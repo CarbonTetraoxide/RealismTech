@@ -1,4 +1,4 @@
 # RealismTech
 A Minecraft modpack based on real life.<br>
 ## Other Languages:<br>
-[zh_cn](https://github.com/CarbonTetraoxide/RealismTech/edit/main/README.md,"")
+[zh_cn](https://github.com/CarbonTetraoxide/RealismTech/edit/main/zh_cn.md,"")
