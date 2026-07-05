@@ -1,0 +1,3 @@
+#RealismTech
+RealismTech是一款基于GTM与TFc开发的，深度还原现实中化学化工相关体系的科技整合包
+目前开发进度：没有
