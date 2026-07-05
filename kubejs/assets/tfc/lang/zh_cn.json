@@ -1,0 +1,22 @@
+{
+  "metal.tfc.cast_iron": "生铁",
+  "metal.tfc.pig_iron": "铸铁",
+
+  "item.tfc.metal.ingot.cast_iron": "生铁锭",
+  "item.tfc.metal.ingot.pig_iron": "铸铁锭",
+  
+  "item.tfc.metal.double_ingot.cast_iron": "生铁双锭",
+  "item.tfc.metal.double_ingot.pig_iron": "铸铁双锭",
+  
+  "item.tfc.metal.sheet.cast_iron": "生铁薄板",
+  "item.tfc.metal.sheet.pig_iron": "铸铁薄板",
+  
+  "item.tfc.metal.double_sheet.cast_iron": "生铁双层薄板",
+  "item.tfc.metal.double_sheet.pig_iron": "铸铁双层薄板",
+  
+  "item.tfc.metal.rod.cast_iron": "生铁棒",
+  "item.tfc.metal.rod.pig_iron": "铸铁棒",
+
+  "fluid.tfc.metal.cast_iron": "熔融生铁",
+  "fluid.tfc.metal.pig_iron": "熔融铸铁"
+}
