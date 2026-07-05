@@ -1,0 +1,196 @@
+{
+	"contents": [
+		{
+			"type": "atom",
+			"element": "S",
+			"index": 0,
+			"x": 0.0,
+			"y": 0.0
+		},
+		{
+			"type": "atom",
+			"element": "O",
+			"index": 1,
+			"x": 0.0,
+			"y": 1.0
+		},
+		{
+			"type": "atom",
+			"element": "O",
+			"index": 2,
+			"x": 0.0,
+			"y": -1.0
+		},
+		{
+			"type": "atom",
+			"element": "O",
+			"index": 3,
+			"x": 1.0,
+			"y": 0.0
+		},
+		{
+			"type": "atom",
+			"element": "O",
+			"index": 4,
+			"x": -1.0,
+			"y": 0.0
+		},
+		{
+			"sup": "2-",
+			"atoms": [0, 1, 2, 3, 4],
+			"type": "parens"
+		},
+		{
+			"type": "atom",
+			"element": {
+				"symbol": "Cu",
+				"color": {"color": -14494270, "optional": true},
+				"material": "gtceu:copper"
+			},
+			"index": 5,
+			"x": 4.5,
+			"y": 0.0
+		},
+		{
+			"type": "atom",
+			"element": "O",
+			"index": 6,
+			"x": 4.5,
+			"y": 1.0
+		},
+		{
+			"type": "atom",
+			"element": "H",
+			"index": 7,
+			"x": 4.0,
+			"y": 1.5
+		},
+		{
+			"type": "atom",
+			"element": "H",
+			"index": 8,
+			"x": 5.0,
+			"y": 1.5
+		},
+		{
+			"type": "atom",
+			"element": "O",
+			"index": 9,
+			"x": 4.5,
+			"y": -1.0
+		},
+		{
+			"type": "atom",
+			"element": "H",
+			"index": 10,
+			"x": 4.0,
+			"y": -1.5
+		},
+		{
+			"type": "atom",
+			"element": "H",
+			"index": 11,
+			"x": 5.0,
+			"y": -1.5
+		},
+		{
+			"type": "atom",
+			"element": "O",
+			"index": 12,
+			"x": 5.5,
+			"y": 0.0
+		},
+		{
+			"type": "atom",
+			"element": "H",
+			"index": 13,
+			"x": 6.0,
+			"y": 0.5
+		},
+		{
+			"type": "atom",
+			"element": "H",
+			"index": 14,
+			"x": 6.0,
+			"y": -0.5
+		},
+		{
+			"type": "atom",
+			"element": "O",
+			"index": 15,
+			"x": 3.5,
+			"y": 0.0
+		},
+		{
+			"type": "atom",
+			"element": "H",
+			"index": 16,
+			"x": 3.0,
+			"y": 0.5
+		},
+		{
+			"type": "atom",
+			"element": "H",
+			"index": 17,
+			"x": 3.0,
+			"y": -0.5
+		},
+		{
+			"sup": "2+",
+			"atoms": [5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17],
+			"type": "parens"
+		},
+		{
+			"type": "bond",
+			"a": 0, "b": 1, "lines": ["solid", "solid"], "centered": true
+		},
+		{
+			"type": "bond",
+			"a": 0, "b": 2, "lines": ["solid", "solid"], "centered": true
+		},
+		{
+			"type": "bond",
+			"a": 0, "b": 3, "lines": ["solid"]
+		},
+		{
+			"type": "bond",
+			"a": 0, "b": 4, "lines": ["solid"]
+		},
+		{
+			"type": "bond", "a": 5, "b": 6, "lines": ["solid"]
+		},
+		{
+			"type": "bond", "a": 6, "b": 7, "lines": ["solid"]
+		},
+		{
+			"type": "bond", "a": 6, "b": 8, "lines": ["solid"]
+		},
+		{
+			"type": "bond", "a": 5, "b": 9, "lines": ["solid"]
+		},
+		{
+			"type": "bond", "a": 9, "b": 10, "lines": ["solid"]
+		},
+		{
+			"type": "bond", "a": 9, "b": 11, "lines": ["solid"]
+		},
+		{
+			"type": "bond", "a": 5, "b": 12, "lines": ["solid"]
+		},
+		{
+			"type": "bond", "a": 12, "b": 13, "lines": ["solid"]
+		},
+		{
+			"type": "bond", "a": 12, "b": 14, "lines": ["solid"]
+		},
+		{
+			"type": "bond", "a": 5, "b": 15, "lines": ["solid"]
+		},
+		{
+			"type": "bond", "a": 15, "b": 16, "lines": ["solid"]
+		},
+		{
+			"type": "bond", "a": 15, "b": 17, "lines": ["solid"]
+		}
+	]
+}

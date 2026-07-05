@@ -1,0 +1,231 @@
+{
+	"contents": [
+		{
+			"type": "atom",
+			"element": {
+				"symbol": "Cu",
+				"color": {"color": -14494270, "optional": true},
+				"material": "gtceu:copper"
+			},
+			"index": 0,
+			"x": 1.5,
+			"y": 0.0
+		},
+		{
+			"type": "atom",
+			"element": "O",
+			"index": 1,
+			"x": 0.7,
+			"y": 0.7
+		},
+		{
+			"type": "atom",
+			"element": "H",
+			"index": 2,
+			"x": 0.3,
+			"y": 1.1
+		},
+		{
+			"type": "atom",
+			"element": "H",
+			"index": 3,
+			"x": 0.7,
+			"y": 1.2
+		},
+		{
+			"type": "atom",
+			"element": "O",
+			"index": 4,
+			"x": 0.7,
+			"y": -0.7
+		},
+		{
+			"type": "atom",
+			"element": "H",
+			"index": 5,
+			"x": 0.3,
+			"y": -1.1
+		},
+		{
+			"type": "atom",
+			"element": "H",
+			"index": 6,
+			"x": 0.7,
+			"y": -1.2
+		},
+		{
+			"type": "atom",
+			"element": "O",
+			"index": 7,
+			"x": 2.3,
+			"y": 0.7
+		},
+		{
+			"type": "atom",
+			"element": "H",
+			"index": 8,
+			"x": 2.1,
+			"y": 1.2
+		},
+		{
+			"type": "atom",
+			"element": "H",
+			"index": 9,
+			"x": 2.8,
+			"y": 0.7
+		},
+		{
+			"type": "atom",
+			"element": "O",
+			"index": 10,
+			"x": 2.3,
+			"y": -0.7
+		},
+		{
+			"type": "atom",
+			"element": "H",
+			"index": 11,
+			"x": 2.1,
+			"y": -1.2
+		},
+		{
+			"type": "atom",
+			"element": "H",
+			"index": 12,
+			"x": 2.8,
+			"y": -0.7
+		},
+		{
+			"sup": "2+",
+			"atoms": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+			"type": "parens"
+		},
+		{
+			"type": "atom",
+			"element": "O",
+			"index": 13,
+			"x": 3.6,
+			"y": 0.0
+		},
+		{
+			"type": "atom",
+			"element": "H",
+			"index": 14,
+			"x": 4.2,
+			"y": 0.3
+		},
+		{
+			"type": "atom",
+			"element": "H",
+			"index": 15,
+			"x": 4.2,
+			"y": -0.3
+		},
+		{
+			"type": "atom",
+			"element": "S",
+			"index": 16,
+			"x": 5.6,
+			"y": 0.0
+		},
+		{
+			"type": "atom",
+			"element": "O",
+			"index": 17,
+			"x": 4.9,
+			"y": 0.6
+		},
+		{
+			"type": "atom",
+			"element": "O",
+			"index": 18,
+			"x": 4.9,
+			"y": -0.6
+		},
+		{
+			"type": "atom",
+			"element": "O",
+			"index": 19,
+			"x": 6.3,
+			"y": 0.6
+		},
+		{
+			"type": "atom",
+			"element": "O",
+			"index": 20,
+			"x": 6.3,
+			"y": -0.6
+		},
+		{
+			"sup": "2-",
+			"atoms": [16, 17, 18, 19, 20],
+			"type": "parens"
+		},
+		{
+			"type": "bond", "a": 1, "b": 2, "lines": ["solid"]
+		},
+		{
+			"type": "bond", "a": 1, "b": 3, "lines": ["solid"]
+		},
+		{
+			"type": "bond", "a": 1, "b": 0, "lines": ["solid"]
+		},
+		{
+			"type": "bond", "a": 4, "b": 5, "lines": ["solid"]
+		},
+		{
+			"type": "bond", "a": 4, "b": 6, "lines": ["solid"]
+		},
+		{
+			"type": "bond", "a": 4, "b": 0, "lines": ["solid"]
+		},
+		{
+			"type": "bond", "a": 7, "b": 8, "lines": ["solid"]
+		},
+		{
+			"type": "bond", "a": 7, "b": 9, "lines": ["solid"]
+		},
+		{
+			"type": "bond", "a": 7, "b": 0, "lines": ["solid"]
+		},
+		{
+			"type": "bond", "a": 10, "b": 11, "lines": ["solid"]
+		},
+		{
+			"type": "bond", "a": 10, "b": 12, "lines": ["solid"]
+		},
+		{
+			"type": "bond", "a": 10, "b": 0, "lines": ["solid"]
+		},
+		{
+			"type": "bond", "a": 13, "b": 14, "lines": ["solid"]
+		},
+		{
+			"type": "bond", "a": 13, "b": 15, "lines": ["solid"]
+		},
+		{
+			"type": "bond", "a": 16, "b": 17, "lines": ["solid"]
+		},
+		{
+			"type": "bond", "a": 16, "b": 18, "lines": ["solid"]
+		},
+		{
+			"type": "bond", "a": 16, "b": 19, "lines": ["solid", "solid"], "centered": true
+		},
+		{
+			"type": "bond", "a": 16, "b": 20, "lines": ["solid", "solid"], "centered": true
+		},
+		{
+			"type": "bond", "a": 9, "b": 13, "lines": ["dotted"]
+		},
+		{
+			"type": "bond", "a": 12, "b": 13, "lines": ["dotted"]
+		},
+		{
+			"type": "bond", "a": 14, "b": 17, "lines": ["dotted"]
+		},
+		{
+			"type": "bond", "a": 15, "b": 18, "lines": ["dotted"]
+		}
+	]
+}

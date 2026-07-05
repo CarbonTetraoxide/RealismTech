@@ -1,0 +1,169 @@
+{
+	"contents": [
+		{
+			"type": "atom",
+			"element": "S",
+			"index": 0,
+			"x": 2.926,
+			"y": 0.175
+		},
+		{
+			"type": "atom",
+			"element": "O",
+			"index": 1,
+			"x": 3.792,
+			"y": -0.325
+		},
+		{
+			"type": "atom",
+			"element": "O",
+			"index": 2,
+			"x": 2.426,
+			"y": -0.691
+		},
+		{
+			"type": "atom",
+			"element": "O",
+			"index": 3,
+			"x": 3.426,
+			"y": 1.041
+		},
+		{
+			"type": "atom",
+			"element": "O",
+			"index": 4,
+			"x": 2.0599,
+			"y": 0.675
+		},
+		{
+			"type": "atom",
+			"element": "S",
+			"index": 5,
+			"x": 4.658,
+			"y": 0.175
+		},
+		{
+			"type": "atom",
+			"element": "O",
+			"index": 6,
+			"x": 5.158,
+			"y": -0.691
+		},
+		{
+			"type": "atom",
+			"element": "O",
+			"index": 7,
+			"x": 4.158,
+			"y": 1.041
+		},
+		{
+			"type": "atom",
+			"element": "O",
+			"index": 8,
+			"x": 5.524,
+			"y": 0.675
+		},
+		{
+			"type": "atom",
+			"element": "H",
+			"index": 9,
+			"x": 1.0599,
+			"y": 0.675
+		},
+		{
+			"type": "atom",
+			"element": "H",
+			"index": 10,
+			"x": 6.524,
+			"y": 0.675
+		},
+		{
+			"type": "bond",
+			"a": 0,
+			"b": 1,
+			"lines": [
+				"solid"
+			]
+		},
+		{
+			"type": "bond",
+			"a": 0,
+			"b": 2,
+			"lines": [
+				"solid",
+				"solid"
+			],
+			"centered": true
+		},
+		{
+			"type": "bond",
+			"a": 0,
+			"b": 3,
+			"lines": [
+				"solid",
+				"solid"
+			],
+			"centered": true
+		},
+		{
+			"type": "bond",
+			"a": 0,
+			"b": 4,
+			"lines": [
+				"solid"
+			]
+		},
+		{
+			"type": "bond",
+			"a": 1,
+			"b": 5,
+			"lines": [
+				"solid"
+			]
+		},
+		{
+			"type": "bond",
+			"a": 5,
+			"b": 6,
+			"lines": [
+				"solid",
+				"solid"
+			],
+			"centered": true
+		},
+		{
+			"type": "bond",
+			"a": 5,
+			"b": 7,
+			"lines": [
+				"solid",
+				"solid"
+			],
+			"centered": true
+		},
+		{
+			"type": "bond",
+			"a": 5,
+			"b": 8,
+			"lines": [
+				"solid"
+			]
+		},
+		{
+			"type": "bond",
+			"a": 4,
+			"b": 9,
+			"lines": [
+				"solid"
+			]
+		},
+		{
+			"type": "bond",
+			"a": 8,
+			"b": 10,
+			"lines": [
+				"solid"
+			]
+		}
+	]
+}

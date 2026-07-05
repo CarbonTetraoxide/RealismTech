@@ -1,0 +1,80 @@
+{
+	"contents": [
+		{
+			"type": "atom",
+			"element": "O",
+			"index": 0,
+			"x": 1.0,
+			"y": 0.0
+		},
+		{
+			"type": "atom",
+			"element": "H",
+			"index": 1,
+			"x": 0.13,
+			"y": -0.5
+		},
+		{
+			"type": "atom",
+			"element": "H",
+			"index": 2,
+			"x": 1.87,
+			"y": -0.5
+		},
+		{
+			"type": "atom",
+			"element": "H",
+			"index": 3,
+			"x": 1.0,
+			"y": 1.0
+		},
+		{
+			"sup": "+",
+			"atoms": [
+				0,
+				1,
+				2,
+				3
+			],
+			"type": "parens"
+		},
+		{
+			"type": "atom",
+			"element": {
+				"symbol": "Cl⁻",
+				"color": {
+					"color": -13248981,
+					"optional": true
+				},
+				"material": "gtceu:chlorine"
+			},
+			"index": 4,
+			"x": 3.2,
+			"y": 0.25
+		},
+		{
+			"type": "bond",
+			"a": 0,
+			"b": 1,
+			"lines": [
+				"solid"
+			]
+		},
+		{
+			"type": "bond",
+			"a": 0,
+			"b": 2,
+			"lines": [
+				"solid"
+			]
+		},
+		{
+			"type": "bond",
+			"a": 0,
+			"b": 3,
+			"lines": [
+				"solid"
+			]
+		}
+	]
+}
