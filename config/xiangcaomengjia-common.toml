@@ -1,0 +1,146 @@
+
+#回收价与标签显示
+[display]
+	#是否在物品提示中显示回收价
+	showRecyclingPriceTooltip = true
+	#回收价显示：贴图显示=黄字「出售此商品可获得」+物品贴图+价格；文字显示=绿色「→ X 财产点数」。填 icon 或 text。默认：icon
+	recyclingPriceTooltipStyle = "icon"
+
+#价格变动
+#「周期」= 两次价格刷新之间的时间；每次刷新会重算倍率、重置「本周期首次出售」等。
+#周期由下面刷新方式决定：
+#· 睡醒刷新开启时：每睡一觉刷新 → 周期 ≈ 一游戏日（约 20 分钟现实时间）
+#· 周期刷新间隔>0 时：每 N 分钟刷新 → 周期 = 下面 refreshPeriodMinutes（可自定义）
+#· 手动刷新：执行 /xiangcaomengjia refreshPrice 时刷新 → 周期 = 两次指令之间
+[priceVariation]
+	enabled = false
+	#刷新时倍率下限，如 0.8 表示 80%
+	#Range: 0.01 ~ 10.0
+	multiplierMin = 0.8
+	#刷新时倍率上限，如 1.2 表示 120%
+	#Range: 0.01 ~ 10.0
+	multiplierMax = 1.2
+	#每次计价随机浮动百分比，如 5 表示 ±5%，0 表示不随机
+	#Range: 0.0 ~ 100.0
+	randomPercent = 0.0
+	#每天睡醒时刷新价格倍率（此时周期=一游戏日）
+	refreshOnSleep = true
+	#周期长度（分钟）：每过这么多分钟自动刷新一次，0=不按时间周期刷新。例如 60 即 1 小时一周期
+	#Range: 0 ~ 10000
+	refreshPeriodMinutes = 0
+	#允许使用指令手动刷新价格倍率
+	manualRefreshAllowed = true
+	#同种作物卖得越多价格越低
+	supplyDropEnabled = true
+	#每卖几组算一档，默认3
+	#Range: 1 ~ 64
+	supplyDropStacksPerStep = 3
+	#每档跌价百分比，默认5
+	#Range: 0.0 ~ 100.0
+	supplyDropPercentPerStep = 5.0
+	#最多跌到原价的百分之多少，默认50即最低50%
+	#Range: 1.0 ~ 100.0
+	supplyDropMaxPercent = 50.0
+	#刷新时已售数量按比例衰减，不直接清空
+	supplyDecayOnRefresh = true
+	#衰减保留比例，0.5即剩一半，0即清空
+	#Range: 0.0 ~ 1.0
+	supplyDecayFactor = 0.5
+	#久未出售的物品涨价
+	demandBonusEnabled = true
+	#多少tick未卖算一档，6000约5分钟
+	#Range: 100 ~ 1000000
+	demandBonusTicksPerStep = 6000
+	#每档加价百分比
+	#Range: 0.0 ~ 100.0
+	demandBonusPercentPerStep = 1.0
+	#需求加成最多加多少%
+	#Range: 0.0 ~ 100.0
+	demandBonusMaxPercent = 15.0
+	#刷新时随机一个物品本周期涨价
+	priceSpikeEnabled = true
+	#触发概率0~1
+	#Range: 0.0 ~ 1.0
+	priceSpikeChance = 0.2
+	#涨价倍率
+	#Range: 1.0 ~ 5.0
+	priceSpikeMultiplier = 1.5
+	#总倍率上限，0为不限制
+	#Range: 0.0 ~ 10.0
+	priceCapMax = 0.0
+	#总倍率下限，0为不限制，避免跌穿
+	#Range: 0.0 ~ 1.0
+	priceCapMin = 0.0
+	#单次出售达到指定组数时额外加成
+	bulkBonusEnabled = true
+	#达到几组触发批量加成
+	#Range: 1 ~ 64
+	bulkBonusStacks = 4
+	#批量加成百分比
+	#Range: 0.0 ~ 100.0
+	bulkBonusPercent = 5.0
+	#本周期出售物品种类数达到指定数量时加成
+	varietyBonusEnabled = true
+	#出售几种不同物品后触发种类加成
+	#Range: 2 ~ 64
+	varietyBonusTypes = 5
+	#种类加成百分比
+	#Range: 0.0 ~ 100.0
+	varietyBonusPercent = 3.0
+	#每笔手续费百分比，0为无
+	#Range: 0.0 ~ 50.0
+	marketFeePercent = 0.0
+	#本周期首次出售某物品时给一次加成
+	firstSellBonusEnabled = true
+	#首次出售加成百分比
+	#Range: 0.0 ~ 100.0
+	firstSellBonusPercent = 5.0
+
+#出货箱设置修改后需重启游戏或重进存档生效
+[tiers]
+
+	#木出货箱档位
+	[tiers.wood]
+		#两次出货间隔（单位：tick，20=1秒）。默认：1200
+		#Range: > 1
+		updateDelayTicks = 1200
+		#每次出货最多处理物品数量。填 999999 表示全部。默认：576
+		#Range: > 1
+		maxProcessPerTick = 576
+
+	#铁出货箱档位
+	[tiers.iron]
+		#两次出货间隔（单位：tick，20=1秒）。默认：500
+		#Range: > 1
+		updateDelayTicks = 500
+		#每次出货最多处理物品数量。填 999999 表示全部。默认：576
+		#Range: > 1
+		maxProcessPerTick = 576
+
+	#金出货箱档位
+	[tiers.gold]
+		#两次出货间隔（单位：tick，20=1秒）。默认：200
+		#Range: > 1
+		updateDelayTicks = 200
+		#每次出货最多处理物品数量。填 999999 表示全部。默认：1152
+		#Range: > 1
+		maxProcessPerTick = 1152
+
+	#钻石出货箱档位
+	[tiers.diamond]
+		#两次出货间隔（单位：tick，20=1秒）。默认：100
+		#Range: > 1
+		updateDelayTicks = 100
+		#每次出货最多处理物品数量。填 999999 表示全部。默认：1152
+		#Range: > 1
+		maxProcessPerTick = 1152
+
+	#下界合金出货箱档位
+	[tiers.netherite]
+		#两次出货间隔（单位：tick，20=1秒）。默认：40
+		#Range: > 1
+		updateDelayTicks = 40
+		#每次出货最多处理物品数量。填 999999 表示全部。默认：全部
+		#Range: > 1
+		maxProcessPerTick = 999999
+
