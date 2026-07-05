@@ -1,0 +1,13 @@
+{
+  "emi.group.co4tech.gt_ores": "矿石",
+  "emi.group.co4tech.gt_raw_materials": "粗矿",
+  "emi.group.co4tech.gt_crushed_ores": "粉碎矿石",
+  "emi.group.co4tech.gt_purified_ores": "纯净矿石",
+  "emi.group.co4tech.gt_refined_ores": "精炼矿石",
+  "emi.group.co4tech.gt_dusts": "矿石粉",
+  "emi.group.co4tech.gt_pure_dusts": "洁净矿石粉",
+  "emi.group.co4tech.gt_impure_dusts": "含杂矿物粉",
+  "emi.group.co4tech.gt_tiny_dusts": "小撮粉",
+  "emi.group.co4tech.gt_small_dusts": "小堆粉",
+  "emi.group.co4tech.gt_storage_blocks_raw": "粗矿石块"
+}
