@@ -49,4 +49,29 @@ ServerEvents.recipes(event => {
         .outputFluids('gtceu:sulfuric_acid 8000')
         .duration(200)
         .EUt(20)
+
+    //TJ金产线第一步:贵金属锭变为金合金锭
+    event.recipes.gtceu.alloy_smelter('gtceu:gold_alloy_ingot')
+        .itemInputs(Ingredient.of('gtceu:precious_metal_ingot').or('gtceu:precious_metal_dust'),Ingredient.of('minecraft:copper_ingot').or('gtceu:copper_dust').withCount(3))
+        .itemOutputs('4x gtceu:gold_alloy_ingot')
+        .duration(100)
+        .EUt(30)
+
+    //TJ金产线第二步:硝酸浸泡金合金锭
+    event.recipes.gtceu.chemical_reactor('gtceu:gold_leach_dust')
+        .itemInputs('4x gtceu:gold_alloy_ingot')
+        .inputFluids('gtceu:nitric_acid 1000')
+        .itemOutputs('4x gtceu:gold_leach_dust')
+        .outputFluids('gtceu:nitrogen_dioxide 1000')
+        .duration(80)
+        .EUt(30)
+
+    //TJ金产线第三步(之一):电解浸出的金粉
+    event.recipes.gtceu.electrolyzer('gtceu:gold_dust')
+        .itemInputs('4x gtceu:gold_leach_dust')
+        .inputFluids('gtceu:hydrogen 1000')
+        .chancedOutput("gtceu:gold_dust", 8888, 0)
+        .outputFluids('minecraft:water 1000')
+        .duration(300)
+        .EUt(30)
 })
