@@ -1,0 +1,7 @@
+{
+  "parent": "kubejs:block/hulls/motor",
+  "textures": {
+    "0": "kubejs:block/casing/uev",
+    "particle": "kubejs:block/casing/lv"
+  }
+}
